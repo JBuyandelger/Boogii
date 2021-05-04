@@ -1,0 +1,3 @@
+[submodule "zurag"]
+	path = zurag
+	url = https://github.com/JBuyandelger/Boogii.git
