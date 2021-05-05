@@ -1,0 +1,133 @@
+/*
+Author:Vijay Thapa;
+Theme:Food Order Website Amin;
+Version:1.0;
+*/
+
+*{
+    margin:0;
+    padding:0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.wrapper {
+    padding:1%;
+    width:80%;
+    margin:0 auto;
+ }
+
+    .text-center {
+        text-align: center;
+}
+
+.clearfix{
+    float: none;
+    clear: both;
+}
+ .tbl-Name{
+     width: 100%;
+ }
+ .tbl-0{
+     width: 40%;
+ }
+ table tr th{
+     border-bottom: 1px solid black;
+     text-align: left;
+     padding: 1%;
+ }
+
+ table tr td{
+     padding: 1%;
+ }
+
+.btn-primary{
+    background-color: #0066ff;
+    padding: 1%;
+    color:white;
+    text-decoration: none;
+    font-weight: bold;
+}
+.btn-primary:hover{
+    background-color: blueviolet;
+}
+
+.btn-secondary{
+    background-color:rgb(0, 255, 149);
+    padding: 1%;
+    color:black;
+    text-decoration: none;
+    font-weight: bold;
+    width: 98px;
+}
+.btn-secondary:hover{
+    background-color: rgb(80, 226, 43);
+}
+
+.btn-danger{
+    background-color:rgb(255, 0, 242);
+    padding: 1%;
+    color:wheat;
+    text-decoration: none;
+    font-weight: bold;
+}
+.btn-danger:hover{
+    background-color: rgb(226, 43, 150);
+}
+
+.success{
+    color:#1e90ff;
+}
+.error{
+    color:#ff4757;
+}
+
+    /* CSS for Menu*/
+    .mene {
+        border-bottom: 1px solid grey;
+    }
+    .menu ul{
+        text-align: center;
+    }
+.menu ul li{
+        display:inline;
+        padding: 1%;
+}
+.menu ul li a{
+    text-decoration: none;
+    font-weight: bold;
+    color: #fd5672;
+}
+.menu ul li a:hover{
+    color:#ff7979;
+}
+
+/* CSS for main-content */
+.main-content{
+    background-color: #95afc0;
+    padding: 3% 0;
+}
+
+.col-4{
+    width: 19%;
+    background-color: #e6e6e6;
+    margin: 1%;
+    padding: 2%;
+    float: left;
+    
+}
+
+
+   /* CSS for Footer */
+ .footer{
+        background-color: #ff4757;
+      color: white;
+}
+    
+       
+/* CSS for Login */
+.login{
+    border: 1px solid grey;
+    width: 20%;
+    margin: 10% auto;
+    padding: 3%;
+}     
