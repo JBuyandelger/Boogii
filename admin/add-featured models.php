@@ -181,13 +181,15 @@
                 {   
                     $_SESSION['add'] = "<div class ='success'>Цэцэг амжилттай нэмсэн .</div>";
                       header('location:'.SITEURL.'admin/manage-featured models.php');
+                      die();
                 }
                 else
                     {   echo "failed<br>";
                         echo $sql2;
-                        die();
+                        
                         $_SESSION['add'] = "<div class ='error'>Цэцэг нэмж чадсангүй.</div>";
                         header('location:'.SITEURL.'admin/manage-featured models.php');
+                        die();
                    }
 
         }

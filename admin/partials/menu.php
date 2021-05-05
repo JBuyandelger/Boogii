@@ -1,7 +1,7 @@
 <?php
 include('../config/constants.php'); 
 ?>
-
+<!DOCTYPE html>
 <html>
    <head>
         <title>zurag Website - Home Page</title>
