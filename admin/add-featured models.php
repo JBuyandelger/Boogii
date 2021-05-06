@@ -85,7 +85,7 @@
              <td>Онцлох : </td>
               <td>
                   <input type="radio" name ="featured"value="yes">Тийм
-                  <input type="radio" name ="featured"value="no">Үгүй
+                  <input type="radio" checked = "checked" name ="featured"value="no">Үгүй
                </td>
          </tr>   
 
@@ -93,7 +93,7 @@
              <td>Идэвхтэй : </td>
               <td>
                   <input type="radio" name ="active"value="yes">Тийм
-                  <input type="radio" name ="active"value="no">Үгүй
+                  <input type="radio" checked = "checked" name ="active"value="no">Үгүй
                </td>
          </tr>   
                 
