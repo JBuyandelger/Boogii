@@ -105,7 +105,7 @@
                     <td><?php echo $active; ?></td>
                  <td>
                         <a href="<?php echo SITEURL; ?>admin/update-featured models.php?id=<?php echo $id; ?>" class="btn-secondary">Засах</a>
-                        <a href="<?php echo SITEURL; ?>admin/delete-featured models.php?id=<?php echo $id;?>&image_name<?php echo $image_name; ?>" class="btn-danger">Устгах</a>
+                        <a href="<?php echo SITEURL; ?>admin/delete-featured models.php?id=<?php echo $id;?>&image_name=<?php echo $image_name; ?>" class="btn-danger">Устгах</a>
                  </td>
             </tr>
 

@@ -131,7 +131,7 @@
                         <input type="hidden" name="id" value="<?php echo $id; ?>">
                         <input type="hidden" name="current_image" value="<?php echo $current_image ?> ">
 
-                        <input type="submit" name="submit" value="Засах" class="btn-secondary">
+                        <input type="submit" name="submit" value="Заасах" class="btn-secondary">
                     </td>
                 </tr>
 
@@ -150,11 +150,23 @@
 
          $featured = $_POST['featured'];
          $active = $_POST['active'];
-
-         if (isset($_FILES['image']['name'])) {
+        echo "SUBMITTED";
+         if (isset($_FILES['image']['name']) && $_FILES['image']['name']!="") {
+            echo "<br> FILE IMAGE NAME SEэT<br>";
             $image_name = $_FILES['image']['name'];
-            echo "<br>IMAGE:::" . $image_name;
+            print_r($_FILES);
+            echo "<br>";
+            // if ()
+            // {
+            //     echo "("; 
+            //     print_r($_FILES['image']['name']);
+            //     echo ") is not empty";
+            //     unset($_FILES['image']['name']);
+            // }
+            // echo "<br>";
+            // echo "<br>IMAGE:::" . $image_name;
             if ($image_name != "") {
+                // echo "<br>IMAGE NAMEIS NOT EMPTY<br>";
                $ext = end(explode('.', $image_name));
                $image_name = "Flowers-Name-" . rand() . '.' . $ext;
                $src_path = $_FILES['image']['tmp_name'];
@@ -167,15 +179,21 @@
                }
                if ($current_image != "") {
                   $remove_path = "../images/flowers/" . $current_image;
-                  $remove = unlink($remove_path);
+                  $remove = unlink(realpath($remove_path));
                }
                if ($remove == false) {
+                   echo "REMOVE FALSE";
+                   echo "<br>CURRENTE_IMAGE : " . $current_image;
+                   echo "<br>remove_path : " . $remove_path;
+                   echo "<br>realpath(remove_path) : " . realpath($remove_path);
+                   die();
                   $_SESSION['remove-failed'] = "<div class='error'>Одоогийн дүр төрхийг арилгах .</div>";
                   header('location:' . SITEURL . 'admin/manage-flower.php');
                   die();
                }
             }
          } else {
+             echo "<br>image=currentimage;<br>";
             $image_name = $current_image;
          }
 
@@ -197,8 +215,8 @@
  `gift-package_id`= '$category', 
  `featured`= '$featured', 
  `active` = '$active' WHERE id=$id;";
-echo "<br>IMAGE:::" . $image_name;
-die();
+// echo "IMAGENAME:  " . $image_name . "<br>";
+// die();
          $res3 = mysqli_query($conn, $sql3);
          if ($res3 == true) {
             $_SESSION['update'] = "<div class='success'>Цэцэг амжилттай шинэчлэгдсэн .</div>";
